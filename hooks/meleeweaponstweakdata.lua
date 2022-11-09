@@ -1,4 +1,8 @@
-Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "better_bad_melees__init_melee_weapons", function(self)
+if StreamHeistComplements then
+	return
+end
+
+Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_weapons", function(self)
 
 	--	Katana reskins
 	--	Pounder, Great Ruler, Chainsaw, Pitchfork, Bearded Axe, Gold Fever, Great Sword, Fire Axe
