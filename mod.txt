@@ -9,7 +9,7 @@
 	"hooks" : [
 		{
 			"hook_id" : "lib/tweak_data/blackmarket/meleeweaponstweakdata",
-			"script_path" : "hooks/meleeweaponstweakdata.lua"
+			"script_path" : "mod.lua"
 		}
 	]
 
