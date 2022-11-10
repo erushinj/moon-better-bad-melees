@@ -1,10 +1,10 @@
 Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_weapons", function(self)
 
 	local t = {}
-	local function fix(list, based_on)
-		for _, v in pairs(list) do
+	local function fix(based_on)
+		local b = self.melee_weapons[based_on]
+		for _, v in pairs(t) do
 			local w = self.melee_weapons[v]
-			local b = self.melee_weapons[based_on]
 			w.fire_dot_data = b.fire_dot_data or nil
 			w.stats = b.stats
 			w.type = b.type
@@ -25,19 +25,19 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		"great",
 		"fireaxe"
 	}
-	fix(t, "sandsteel")
+	fix("sandsteel")
 
 	t = {
 		"spoon"
 	}
-	fix(t, "spoon_gold")
+	fix("spoon_gold")
 
 	t = {
 		"road",
 		"oxide",
 		"agave"
 	}
-	fix(t, "iceaxe")
+	fix("iceaxe")
 
 	t = {
 		"swagger",
@@ -52,7 +52,7 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		"stick",
 		"poker"
 	}
-	fix(t, "baton")
+	fix("baton")
 
 	t = { 
 		"kabar",
@@ -69,13 +69,13 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		"cleaver",
 		"gerber"
 	}
-	fix(t, "rambo")
+	fix("rambo")
 
 	t = {
 		"shawn",
 		"scoutknife"
 	}
-	fix(t, "clean")
+	fix("clean")
 
 	t = {
 		"toothbrush",
@@ -86,45 +86,45 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		"chef",
 		"fairbair"
 	}
-	fix(t, "switchblade")
+	fix("switchblade")
 
 	t = {
 		"scalper",
 		"tomahawk"
 	}
-	fix(t, "gator")
+	fix("gator")
 
 	t = {
 		"becker"
 	}
-	fix(t, "catch")
+	fix("catch")
 
 	t = {
 		"brass_knuckles",
 		"boxing_gloves"
 	}
-	fix(t, "fists")
+	fix("fists")
 
 	t = {
 		"microphone"
 	}
-	fix(t, "fight")
+	fix("fight")
 
 	t = {
 		"briefcase",
 		"spatula"
 	}
-	fix(t, "whiskey")
+	fix("whiskey")
 
 	t = {
 		"buck"
 	}
-	fix(t, "detector")
+	fix("detector")
 
 	t = {
 		"hammer",
 		"tenderizer"
 	}
-	fix(t, "sap")
+	fix("sap")
 
 end )
