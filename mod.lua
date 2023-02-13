@@ -35,6 +35,8 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 	t = {
 		"road",
 		"oxide",
+		"meat_cleaver",
+		"cleaver",
 		"agave"
 	}
 	fix("iceaxe")
@@ -62,11 +64,9 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		"wing",
 		"bullseye",
 		"brick",
-		"meat_cleaver",
 		"twins",
 		"x46",
 		"tiger",
-		"cleaver",
 		"gerber"
 	}
 	fix("rambo")
