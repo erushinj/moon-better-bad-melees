@@ -1,11 +1,10 @@
 Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_weapons", function(self)
 
-	local t = {}
-	local function fix(based_on)
+	local function fix(based_on, list_to_fix)
 		local b = self.melee_weapons[based_on]
-		for _, v in pairs(t) do
+		for _, v in pairs(list_to_fix) do
 			local w = self.melee_weapons[v]
-			w.fire_dot_data = b.fire_dot_data or nil
+			w.fire_dot_data = b.fire_dot_data
 			w.stats = b.stats
 			w.type = b.type
 			w.repeat_expire_t = b.repeat_expire_t
@@ -15,7 +14,7 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		end
 	end
 
-	t = {
+	fix("sandsteel", {
 		"nin",
 		"meter",
 		"cs",
@@ -24,24 +23,21 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		"mining_pick",
 		"great",
 		"fireaxe"
-	}
-	fix("sandsteel")
+	})
 
-	t = {
+	fix("spoon_gold", {
 		"spoon"
-	}
-	fix("spoon_gold")
+	})
 
-	t = {
+	fix("iceaxe", {
 		"road",
 		"oxide",
 		"meat_cleaver",
 		"cleaver",
 		"agave"
-	}
-	fix("iceaxe")
+	})
 
-	t = {
+	fix("baton", {
 		"swagger",
 		"shock",
 		"baseballbat",
@@ -53,10 +49,9 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		"shillelagh",
 		"stick",
 		"poker"
-	}
-	fix("baton")
+	})
 
-	t = { 
+	fix("rambo", { 
 		"kabar",
 		"kabartanto",
 		"ballistic",
@@ -68,16 +63,14 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		"x46",
 		"tiger",
 		"gerber"
-	}
-	fix("rambo")
+	})
 
-	t = {
+	fix("clean", {
 		"shawn",
 		"scoutknife"
-	}
-	fix("clean")
+	})
 
-	t = {
+	fix("switchblade", {
 		"toothbrush",
 		"aziz",
 		"sword",
@@ -85,46 +78,38 @@ Hooks:PostHook( BlackMarketTweakData, "_init_melee_weapons", "bbm__init_melee_we
 		"push",
 		"chef",
 		"fairbair"
-	}
-	fix("switchblade")
+	})
 
-	t = {
+	fix("gator", {
 		"scalper",
 		"tomahawk"
-	}
-	fix("gator")
+	})
 
-	t = {
+	fix("catch", {
 		"becker"
-	}
-	fix("catch")
+	})
 
-	t = {
+	fix("fists", {
 		"brass_knuckles",
 		"boxing_gloves"
-	}
-	fix("fists")
+	})
 
-	t = {
+	fix("fight", {
 		"microphone"
-	}
-	fix("fight")
+	})
 
-	t = {
+	fix("whiskey", {
 		"briefcase",
 		"spatula"
-	}
-	fix("whiskey")
+	})
 
-	t = {
+	fix("detector", {
 		"buck"
-	}
-	fix("detector")
+	})
 
-	t = {
+	fix("sap", {
 		"hammer",
 		"tenderizer"
-	}
-	fix("sap")
+	})
 
 end )
